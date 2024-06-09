@@ -24,4 +24,22 @@ lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader l
 
 ## jc141 dependencies
 
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2</pre>
+add rumpowered repository
+
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">echo '
+[rumpowered]
+Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf</pre>
+
+sign keys for rumpowered
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman-key --recv-keys cc7a2968b28a04b3
+sudo pacman-key --lsign-key cc7a2968b28a04b3</pre>
+
+refresh all packages
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman -Syyu</pre>
+
+install the required packages
+
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;"sudo pacman -S --needed dwarfs fuse-overlayfs bubblewrap wine-staging
+sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2</pre>
+
+
