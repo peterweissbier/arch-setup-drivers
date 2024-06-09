@@ -42,7 +42,6 @@ install the required packages
 <pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;"sudo pacman -S --needed dwarfs fuse-overlayfs bubblewrap wine-staging
 sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2</pre>
 
-install the core packages
 sudo pacman -S --needed dwarfs fuse-overlayfs bubblewrap gamescope
 
-sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader}
+sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader}</pre>
