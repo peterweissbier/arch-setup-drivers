@@ -24,5 +24,5 @@ lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader l
 
 ## jc141 dependencies
 
-1. sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2 gamescope
-2. sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader}
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2 gamescope
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader}
