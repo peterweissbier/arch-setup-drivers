@@ -44,3 +44,5 @@ sudo pacman -S --needed {lib32-,}{alsa-lib,alsa-plugins,libpulse,pipewire,openal
 
 install the core packages
 sudo pacman -S --needed dwarfs fuse-overlayfs bubblewrap gamescope
+
+sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader}
