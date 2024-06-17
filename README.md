@@ -21,24 +21,3 @@ lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjp
 sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama \
 ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 \
 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader</pre>
-
-## jc141 dependencies
-
-add rumpowered repository
-
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">echo '
-[rumpowered]
-Server = https://jc141x.github.io/rumpowered-packages/$arch ' | sudo tee -a /etc/pacman.conf</pre>
-
-sign keys for rumpowered
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman-key --recv-keys cc7a2968b28a04b3
-sudo pacman-key --lsign-key cc7a2968b28a04b3</pre>
-
-refresh all packages
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">sudo pacman -Syyu</pre>
-
-install the required packages
-
-<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">
-sudo pacman -S --needed {lib32-,}{vulkan-radeon,vulkan-icd-loader,alsa-lib,alsa-plugins,libpulse,pipewire,openal,libxcrypt-compat,gst-plugins-{good,base,base-libs},sdl2_ttf,sdl2_image} libgphoto2
-sudo pacman -S --needed dwarfs fuse-overlayfs bubblewrap gamescope
